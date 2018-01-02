@@ -38,10 +38,18 @@ fi
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+alias open='xdg-open'
 alias c='clear && clear'
 alias ll='ls -lhA --group-directories-first'
 alias ..='cd ..'
-alias open='xdg-open'
+alias cll='c && ll'
+alias cgs='c && git status'
+
+# 'seegap'
+alias cgap='c && git add -p'
+
+# 'sigsip'
+alias cgcp'c && git checkout -p'
 
 cd () {
   builtin cd "$@" && ll;
