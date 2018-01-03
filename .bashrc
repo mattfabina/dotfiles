@@ -49,7 +49,7 @@ alias cgs='c && git status'
 alias cgap='c && git add -p'
 
 # 'sigsip'
-alias cgcp'c && git checkout -p'
+alias cgcp='c && git checkout -p'
 
 cd () {
   builtin cd "$@" && ll;
