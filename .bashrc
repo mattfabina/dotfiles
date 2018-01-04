@@ -63,7 +63,11 @@ mkcd () {
   mkdir "$1" && cd "$1";
 }
 
-pybootstrap() {
+pcat () {
+  cat "$1" | pygmentize | perl -e 'print "\e[38;5;247m".++$i."\e[0m $_" for <>'
+}
+
+pybootstrap () {
   virtualenv --python=python3.5 venv;
   source venv/bin/activate;
   pip install -r requirements/requirements.txt;
