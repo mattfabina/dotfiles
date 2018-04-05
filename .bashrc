@@ -88,7 +88,7 @@ set -o vi
 
 eval "$(direnv hook bash)"
 
-PS1="${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u:\w\$ \[\033[0m\]"
+PS1="${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\h:\w\$ \[\033[0m\]"
 
 show_virtual_env() {
   if [ -n "$VIRTUAL_ENV" ]; then
