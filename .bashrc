@@ -90,13 +90,16 @@ eval "$(direnv hook bash)"
 
 PS1="${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\h:\w\$ \[\033[0m\]"
 
+# disable built-in virtualenv pre-prompt
+VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# enable custom virtualenv pre-prompt
 show_virtual_env() {
   if [ -n "$VIRTUAL_ENV" ]; then
     echo "($(basename $VIRTUAL_ENV)) "
   fi
 }
 export -f show_virtual_env
-
 PS1='$(show_virtual_env)'$PS1
 
 export OPENBLAS_NUM_THREADS=1
