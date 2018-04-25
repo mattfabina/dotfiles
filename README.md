@@ -6,7 +6,7 @@ Dot and configuration files repository inspired by
 ## Setup
 
 * `git init --bare $HOME/.dotfiles`
-* `alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME`
+* `alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
 * `dotfiles config status.showUntrackedFiles no`
 
 Using HTTPS:

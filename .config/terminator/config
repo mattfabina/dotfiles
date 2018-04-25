@@ -1,4 +1,5 @@
 [global_config]
+  always_split_with_profile = True
   inactive_color_offset = 1.0
   title_inactive_bg_color = "#949494"
   title_transmit_bg_color = "#830001"
@@ -25,4 +26,12 @@
     font = Ubuntu Mono 13
     foreground_color = "#d3dae3"
     palette = "#2e3436:#cc3838:#4e9a06:#c4a000:#5c7ba4:#967a99:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    use_system_font = False
+  [[light]]
+    background_color = "#ffffff"
+    background_darkness = 1.21
+    background_image = None
+    font = Ubuntu Mono 13
+    foreground_color = "#000000"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     use_system_font = False

@@ -42,9 +42,15 @@ alias open='xdg-open'
 alias c='clear && clear'
 alias ll='ls -lhA --group-directories-first'
 alias ..='cd ..'
+alias ...='cd .. && cd ..'
+alias ....='cd .. && cd .. && cd ..'
+alias .....='cd .. && cd .. && cd .. && cd ..'
+alias ......='cd .. && cd .. && cd .. && cd .. && cd ..'
 alias cll='c && ll'
 alias cgs='c && git status'
 alias cgd='c && git diff'
+alias cgl='c && git log'
+alias xclip="tr -d '\n' | xclip -selection clipboard"
 
 # 'seegap'
 alias cgap='c && git add -p'
@@ -72,15 +78,6 @@ alias cpcat='c && pcat'
 
 cgrep () {
   c && grep -Irn "$1";
-}
-
-pybootstrap () {
-  virtualenv --python=python3.5 venv;
-  source venv/bin/activate;
-  pip install -r requirements/requirements.txt;
-  deactivate;
-  echo "source venv/bin/activate" >> .envrc;
-  direnv allow .;
 }
 
 # vim-like prompt
