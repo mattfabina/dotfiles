@@ -66,10 +66,10 @@ def main():
     log_file_exists = os.path.isfile(log_file)
     with open(log_file, 'a') as log_file_writer:
         if not log_file_exists:
-            log_file_writer.write('start,end,arg,task')
+            log_file_writer.write('start,end,arg,task\n')
 
         csv_line = ','.join([log_start, log_end, args.type, args.task])
-        log_file_writer.write(csv_line)
+        log_file_writer.write(csv_line + '\n')
 
 
 def format_time_output(t):
