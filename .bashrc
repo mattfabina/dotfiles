@@ -51,6 +51,7 @@ alias cgs='c && git status'
 alias cgd='c && git diff'
 alias cgl='c && git log'
 alias xclip="tr -d '\n' | xclip -selection clipboard"
+alias rsync='rsync --human-readable --info=progress2'
 
 # 'seegap'
 alias cgap='c && git add -p'
@@ -77,7 +78,12 @@ pcat () {
 alias cpcat='c && pcat'
 
 cgrep () {
-  c && grep -Irn "$1";
+  c && grep \
+      --binary-files=without-match \
+      --recursive \
+      --line-number \
+      --exclude-dir=.git \
+      "$1";
 }
 
 # vim-like prompt
@@ -99,5 +105,7 @@ show_virtual_env() {
 export -f show_virtual_env
 PS1='$(show_virtual_env)'$PS1
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
 export OPENBLAS_NUM_THREADS=1
 export JOBLIB_START_METHOD='forkserver'

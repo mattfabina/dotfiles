@@ -18,19 +18,17 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#404552"
-    background_darkness = 0.92
-    background_image = None
-    background_type = transparent
+    background_color = "#393848"
+    background_darkness = 1.0
     cursor_color = "#d3dae2"
     font = Ubuntu Mono 13
     foreground_color = "#d3dae3"
-    palette = "#2e3436:#cc3838:#4e9a06:#c4a000:#5c7ba4:#967a99:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#e2a500:#83a598:#d3869b:#8ec07c:#ebdbb2"
     use_system_font = False
   [[light]]
     background_color = "#ffffff"
     background_darkness = 1.21
-    background_image = None
+    cursor_color = "#000000"
     font = Ubuntu Mono 13
     foreground_color = "#000000"
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"

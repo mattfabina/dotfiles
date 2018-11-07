@@ -9,10 +9,15 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
+Plugin 'tell-k/vim-autopep8'
+call vundle#end()
 
 filetype plugin indent on
 
 set noesckeys
+
+" search highlighting
+set hlsearch
 
 " line numbers
 set number
@@ -23,7 +28,6 @@ set listchars=tab:>-,trail:~,extends:>,precedes:<
 set list
 
 " tab -> 4 spaces
-filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -39,3 +43,7 @@ map <F2> <Esc>:w<CR>:!python %:p<CR>
 " 79 column guide
 highlight ColorColumn ctermbg=3
 call matchadd('ColorColumn', '\%81v', 100)
+
+autocmd FileType python setlocal formatprg=autopep8\ -
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
+autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2
