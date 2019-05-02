@@ -89,7 +89,9 @@ cgrep () {
 # vim-like prompt
 set -o vi
 
-eval "$(direnv hook bash)"
+if [ $(command -v direnv) ]; then
+    eval "$(direnv hook bash)"
+fi
 
 PS1="${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\h:\w\$ \[\033[0m\]"
 
