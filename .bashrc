@@ -111,3 +111,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 export OPENBLAS_NUM_THREADS=1
 export JOBLIB_START_METHOD='forkserver'
+
+if [ -d "$HOME/.local/bin" ] ; then
+  PATH="$PATH:$HOME/.local/bin"
+fi
